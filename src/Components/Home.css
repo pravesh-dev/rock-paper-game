@@ -1,0 +1,88 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+#container {
+  width: 40vw;
+  height: 60vh;
+  display: flex;
+  gap: 2vh;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  h1 {
+    color: #fff;
+    font-size: 2.8vw;
+  }
+  h2 {
+    font-size: 2vw;
+  }
+  p {
+    font-size: 1.6vw;
+    span:nth-child(1) {
+      color: red;
+    }
+    span:nth-child(2) {
+      color: green;
+    }
+  }
+}
+#btns-container {
+  display: flex;
+  gap: 1vw;
+  span {
+    width: 5vw;
+    height: 5vw;
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    font-size: 3vw;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.2s;
+    overflow: hidden;
+  }
+  span::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    font-size: 1vw;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: linear-gradient(transparent, #000);
+    transition: all 0.4s;
+  }
+  span:nth-child(1) {
+    background: red;
+  }
+  span:nth-child(1):after {
+    content: "ROCK";
+  }
+  span:nth-child(2) {
+    background: green;
+  }
+  span:nth-child(2):after {
+    content: "PAPER";
+  }
+  span:nth-child(3) {
+    background: blue;
+  }
+  span:nth-child(3):after {
+    content: "SCISSOR";
+  }
+  span:hover::after {
+    top: 0;
+  }
+  span:active {
+    transform: scale(0.9);
+  }
+}
